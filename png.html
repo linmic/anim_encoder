@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+  <style>
+      /* 10240 = 160 * step(65-1) */
+      @-webkit-keyframes loop {
+        from { background-position: 0 0; }
+        to { background-position: -10240px; }
+      }
+
+      body {
+        width: 100%;
+        height: 100%;
+        background: #000;
+      }
+
+      .bg {
+        width: 960px;
+        height: 490px;
+        background: url('960.jpg') center no-repeat;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        z-index: 1;
+      }
+
+      .loop {
+        width: 160px;
+        height: 160px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        background: url('loop.png') left top no-repeat;
+        /* step = len -1 */
+        -webkit-animation: loop 2s steps(64) infinite;
+        z-index: 2;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="loop"></div>
+  </body>
+</html>

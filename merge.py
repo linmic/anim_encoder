@@ -19,9 +19,10 @@ if not len(sys.argv) == 5:
     sys.exit(0)
 
 images_range = range(idx_from, idx_to + 1)
+print len(images_range)
 el_width = el_height = 160
 
-new_im_width = el_width*(len(images_range)-1)
+new_im_width = el_width*(len(images_range))
 new_im = Image.new('RGBA', (new_im_width, el_height))
 
 """
